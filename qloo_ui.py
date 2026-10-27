@@ -340,8 +340,8 @@ function renderCompare(d) {
   if (!n) { const tr = el("tr"), td = el("td", "No picks to compare."); td.colSpan = 2; tr.appendChild(td); body.appendChild(tr); }
   const foot = $("compare-foot"); foot.textContent = "";
   const tr = el("tr");
-  tr.appendChild(el("td", "Average group score: " + pct(d.llm_avg)));
-  tr.appendChild(el("td", "Average group score: " + pct(d.qloo_avg)));
+  tr.appendChild(el("td", "Average group score: " + pct(d.llm_avg_group_score)));
+  tr.appendChild(el("td", "Average group score: " + pct(d.grounded_avg_group_score)));
   foot.appendChild(tr);
   showNotice("baseline-partial", d);
 }
